@@ -1732,6 +1732,7 @@ void DecodedInst::printDisassembly()
 
         case DecodedOperation::ADD4:
             printf("add %s, %s\n", rdn.c_str(), rm.c_str());
+            break;
 
         case DecodedOperation::ADD5:
             printf("add %s, %s, #%" PRIu32 "\n", rd.c_str(), rm.c_str(), im);
