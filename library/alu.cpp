@@ -308,7 +308,7 @@ int Execute::asr1(Reg rd, uint32_t drm, uint32_t im)
         dres = drm >> im;
         if (GET_BIT_AT_POS(drm, BITS_PER_WORD - 1) == 0x1)
         {
-            dres = dres | (~0 << (BITS_PER_WORD - im));
+            dres = dres | (~0U << (BITS_PER_WORD - im));
         }
 
         /* Set the carry bit to the value of the last bit shifted out */
@@ -351,7 +351,7 @@ int Execute::asr2(Reg rdn, uint32_t drdn, uint32_t drm)
         dres = drdn >> drm;
         if (GET_BIT_AT_POS(drdn, BITS_PER_WORD - 1) == 0x1)
         {
-            dres = dres | (~0 << (BITS_PER_WORD - drm));
+            dres = dres | (~0U << (BITS_PER_WORD - drm));
         }
     }
     else
